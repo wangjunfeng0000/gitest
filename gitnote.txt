@@ -4,5 +4,32 @@ git仓库，使用git init命令。
 第一步，使用命令git add <file>，注意，可反复多次使用，添加多个文件；
 第二步，使用命令git commit，完成。
 
+git status
+git diff
+
+git log
+git reset --hard HEAD^
+git reflog
+git reset --hard commit_id
+
+git add *.py
+git reset HEAD 1.py
+
+如何丢弃工作区的修改
+git checkout -- readme.txt
+
+git reset HEAD file可以把暂存区的修改撤销掉（unstage），重新放回工作区
+
+要从版本库中删除该文件，那就用命令git rm删掉，并且git commit
+
+删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本git checkout -- test.txt  
+
+命令git rm用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容
+
+git remote add origin git@github.com:wangjunfeng0000/gitest.git
+git push -u origin master
+
+登陆GitHub，创建一个新的仓库，名字叫gitest
+用命令git clone克隆一个本地库git clone git@github.com:wangjunfeng0000/gitest.git
 
 
