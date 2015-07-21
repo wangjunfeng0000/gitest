@@ -30,6 +30,23 @@ git remote add origin git@github.com:wangjunfeng0000/gitest.git
 git push -u origin master
 
 登陆GitHub，创建一个新的仓库，名字叫gitest
-用命令git clone克隆一个本地库git clone git@github.com:wangjunfeng0000/gitest.git
+用命令git clone克隆一个本地库
+git clone git@github.com:wangjunfeng0000/gitest.git
+
+修改后可以通过git push把本地的代码push到服务器端：
+git push origin master
+
+
+我们创建dev分支，然后切换到dev分支
+git checkout -b dev
+
+git branch 查看分支
+
+切回主分支
+git checkout master
+
+git merge dev合并dev分支到主干
+
+
 
 
