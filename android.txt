@@ -1,0 +1,2077 @@
+若要判断是否是中文
+只需要用以下代码：
+for (int i = 0; i < sentence.length(); i++){
+    char c = sentence.charAt(i);
+    if ((c >= 0x4e00)&&(c <= 0x9fbb)){
+        System.out.println("中文");
+    }
+}
+0000:Basic Latin 基本拉丁语
+0080:Latin-1 Supplement 拉丁语-1补遗
+0100:Latin Extended-A 拉丁语扩充-A
+0180:Latin Extended-B 拉丁语扩充-B
+0250:IPA Extensions 国际音标
+02B0:Spacing Modifier Letters
+0300:Combining Diacritical Marks 组合变音符
+0370:Greek and Coptic 希腊语和埃及语
+0400:Cyrillic 西里尔文
+0500:Cyrillic Supplement 西里尔文补遗
+0530:Armenian 亚美尼亚语
+0590:Hebrew 希伯来语
+0600:Arabic 阿拉伯语
+0700:Syriac 叙利亚语
+0780:Thaana 马尔代夫语
+0900:Devanagari 梵文
+0980:Bengali 孟加拉语
+0A00:Gurmukhi 果鲁穆奇语
+0A80:Gujarati 古吉特拉语
+0B00:Oriya 奥里雅语
+0B80:Tamil 泰米尔语
+0C00:Telugu 泰卢固语
+0C80:Kannada 埃纳德语
+0D00:Malayalam 马拉雅拉姆语
+0D80:Sinhala 锡兰语
+0E00:Thai 泰国语
+0E80:Lao 老挝语
+0F00:Tibetan 西藏语
+1000:Myanmar 玛雅语
+10A0:Georgian 格鲁吉亚语
+1100:Hangul Jamo (一种特殊韩文)
+1200:ethiopic 埃塞俄比亚语
+13A0:Cherokee 切罗基语
+1400:Unified Canadian Aboriginal Syllabic
+1680:Ogham 欧甘字母
+16A0:Runic 古代北欧文字
+1700:Tagalog 塔加拉语
+1720:Hanunoo
+1740:Buhid
+1760:Tagbanwa
+1780:Khmer 高棉语
+1800:Mongolian 蒙古语
+1900:Limbu
+1950:Tai Le
+19E0:Khmer Symbols 孟高棉语符号
+1D00:Phonetic Extensions 语音扩充
+1E00:Latin Extended Additional 拉丁扩充附加
+1F00:Greek Extended 希腊语扩充
+2000:General Punctuation 通用标点
+2070:Superscripts and Subscripts 上标和下标
+20A0:Currency Symbols 货币符号
+20D0:Combining Marks for Symbols
+2100:Letterlike Symbols
+2150:Number Forms 数字形式
+2190:Arrows 箭头
+2200:Mathematical Operators 数学运算符
+2300:Miscellaneous Technical 零杂技术用符号
+2400:Control Pictures
+2440:Optical Character Recognition
+2460:enclosed Alphanumerics 带圈和括号的数字与字母
+2500:Box Drawing 边框
+2580:Block Elements 方块
+25A0:Geometric Shapes 几何形状
+2600:Miscellaneous Symbols 零杂符号
+2700:Dingbats 丁贝符
+27D0:Miscellaneous Mathematical Symbols-A 零杂数学符号
+27F0:Supplemental Arrows-A 扩充箭头A
+2800:Braille Patterns 盲文
+2900:Supplemental Arrows-B 扩充箭头B
+2980:Miscellaneous Mathematical Symbols-B 零杂数学符号B
+2A00:Supplemental Mathematical Operators 扩充的数学运算符
+2B00:Miscellaneous Symbols and Arrows 零杂符号和箭头
+2E80:CJK Radicals Supplement CJK词根补遗
+2F00:Kangxi Radicals Kangxi词根
+2FF0:Ideographic Description Characters 表意符号
+3000:CJK Symbols and Punctuation CJK符号和标点
+3040:Hiragana 平假名
+30A0:Katakana 片假名
+3100:Bopomofo 汉语注音符号
+3130:Hangul Compatibility Jamo
+3190:Kanbun
+31A0:Bopomofo Extended 汉语注音符号扩充
+31F0:Katakana Phonetic Extensions
+3200:enclosed CJK Letters and Months 带圈的CJK字母和月份
+3300:CJK Compatibility CJK兼容
+3400:CJK Unified Ideographs Extension A (1.5MB) CJK统一象形文字扩展A
+4DC0:Yijing Hexagram Symbols 易经符号
+4E00:CJK Unified Ideographs (5MB) CJK统一象形文字
+A000:Yi Syllables 彝语音节
+A490:Yi Radicals 彝语词根
+AC00:Hangul Syllables (7MB) Hangul音节
+D800:High Surrogates 高代用品
+DC00:Low Surrogates 低代用品
+E000:Private Use Area 私人保留区
+F900:CJK Compatibility Ideographs CJK兼容象形文字
+FB00:Alphabetic Presentation Forms 字母序的表象符
+FB50:Arabic Presentation Forms-A 阿拉伯表象符A
+FE00:Variation Selectors
+FE20:Combining Half Marks
+FE30:CJK Compatibility Forms
+FE50:Small Form Variants
+FE70:Arabic Presentation Forms-B 阿拉伯表象符-B
+FF00:Halfwidth and Fullwidth Forms 半宽和全宽形式
+FFF0:Specials 特殊符号
+
+
+安装git和curl 在终端窗口敲下面的命令：
+sudo apt-get install git-core curl 
+安装repo脚本:
+curl http://android.git.kernel.org/repo >~/tools/repo
+
+定时关机：
+sudo shutdown +100
+sudo shutdown -h 24:00
+
+Ctrl + Alt + t 打开terminal终端
+Ctrl + Pageup / Pagedown 切换tab
+Alt + n 切换到窗口n
+    
+// 开源网站
+https://www.codeaurora.org/gitweb/quic/la/?p=platform/frameworks/base.git;a=commit;h=0df689495a02c4a34943330099404bd8860981c9
+
+
+android 编译环境：
+第一步.install android environment
+
+* add software source:
+> sudo gedit /etc/apt/sources.list
+
+* add below to list:
+> deb http://ir.archive.ubuntu.com/ubuntu jaunty-updates main multiverse
+
+* sudo apt-get update
+> sudo apt-get install sun-java5-jdk
+
+
+第二步. 
+$ sudo apt-get install sun-java5-jdk
+$ sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev ia32-libs x11proto-core-dev libx11-dev lib32z-dev lib32readline5-dev
+
+
+设置环境变量：
+1、sudo  gedit   ~/.bashrc 或者/etc/environment
+2、将下面的两句加到上面打开的文件里
+export ANDROID_HOME=/home/jason/Develop_SDK/android-sdk-linux_86
+export PATH=$PATH:$ANDROID_HOME/tools
+最新的SDK要改为：$PATH:$ANDROID_HOMOE/platform-tools
+
+
+
+
+$ sudo apt-get install sun-java6-jdk
+$ sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev ia32-libs x11proto-core-dev libx11-dev lib32z-dev
+
+sudo apt-get install lib32readline-gplv2-dev
+sudo apt-get install g++-4.4-multilib
+（sudo apt-get install uboot-mkimage）
+android4.1版需要安装（sudo apt-get install libxml2-utils）
+
+
+4：gcc g++
+　　　　sudo apt-get install gcc-4.4
+　　　　sudo apt-get install g++-4.4
+　　　　cd /usr/bin
+　　　　ls -l gcc*
+　　　　sudo mv gcc gcc.bak
+　　　　sudo ln -s gcc-4.4 gcc
+　　　　ls -l g++*
+　　　　sudo mv g++ g++.bak
+　　　　sudo ln -s g++-4.4 g++
+　　　　gcc -v
+　　　　g++ -v
+
+1. android支持的多媒体格式位置为：android\frameworks\base\media\java\android\media\MediaFile.java
+2. 最大音量分级定义结构提MAX_STREAM_VOLUME,默认音量DEFAULT_STREAM_VOLUME
+3. grep -rin ISimWrapperService ./
+4. undefined reference to `__android_log_print'解决方法：
+   .c文件加入#include <utils/Log.h>, 
+   .mk文件加入：LOCAL_LDLIBS := -llo    
+	      LOCAL_SHARED_LIBRARIES += \
+					libcutils libutils
+
+
+5. 解决执行权限问题：
+	<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      		package="com.ontim.MobileTV"
+		android:sharedUserId="android.uid.system">
+
+6. setting 设置 数据的查看：
+adb shell
+cd /data/data/com.ontim.tv/databases
+sqlite3 /data/data/com.ontim.tv/databases/tvplayer.db
+sqlite3 /data/data/com.android.providers.media/databases/internalext.db
+sqlite3 /data/data/com.android.providers.media/databases/external-b442387d.db
+sqlite3 settings.db
+sqlite> .show 查看SQL的配置
+sqlite> .help
+sqlite> .quit
+sqlite> .tables 查看有那些表格
+sqlite> .header ON  显示头信息
+sqlite> select * from secure; //查看内容
+sqlite> insert into secure(name, value) values('wifi_auto_connect_ap', 0); //添加其中一项
+sqlite> update TABLE_NAME set COLUMN_NAME ='李四' where  _id=1; //更改其中一项
+sqlite> delete from TABLE_NAME where id = 2 ; //删除其中一项
+多媒体：sqlite3 /data/data/com.android.providers.media/databases/external-a83a272d.db
+ctrl+d退出
+insert into files(_size, format, parent, _display_name, mime_type, title, bucket_id, bucket_display_name, media_type, width, height) values(178969, 14337, 1789, '1111.jpg', 'image/jpeg', '1111', -935325671, 'picture', 1, 1024, 768) ;
+
+7.
+设置USB Android模式：setprop sys.start_gandroid 1
+设置USB Multi  模式：setprop sys.start_gmulti 1
+
+
+导出离线log到当前目录：
+adb pull /data/logger/ ./logger/
+离线log开关：
+persist.service.aplogd.enable  0 关 1 开
+离线kmsg开关：
+adb root
+adb shell
+cat /proc/kmsg >>/data/logger/kmsg.log &
+
+调试网络程序，保存到pcap文件，再使用wireshark查看：
+tcpdump -p -nnn -vvv -s 0 -w /sdcard/1.pcap port 80 and tcp
+tcpdump -p -nnn -vvv -s 0 -w /data/local/test.pcap port 80 and tcp
+
+其中：
+-p 是不开混杂模式，不过如果是用 3G/GPRS，区别不大...
+-nnn 不解析地址，直接显示IP和端口
+-s 0 最好加上，否则很多包都会被截断，就看不全了
+-w 保存到 sdcard 上
+port 80 and tcp，限定只看 80 端口的请求，调试 http 通讯比较合适
+
+
+8. 播放音乐：
+command:
+gst-launch playbin uri=file:///system/media/audio/bootaudio.mp3
+gst-launch playbin uri=file:///system/media/audio/ui/LowBattery.ogg
+gst-launch playbin uri=file:///sdcard/1.mp3
+gst-launch -v playbin uri=file:///home/niehz/question.ts
+gst-launch filesrc location=./question.ts ! mpegtsdemux ! ffdec_mpeg2video ! ffmpegcolorspace ! xvimagesink sync=true
+gst-launch filesrc location=./question.ts ! ffdemux_mpegts ! ffdec_mpeg2video ! ffmpegcolorspace ! xvimagesink sync=true
+gst-launch filesrc location=./question.ts ! ffdemux_mpegts !  ffdec_mp3 ! audioresample ! osssink
+gst-launch filesrc location=./question.ts ! ffdemux_mpegts name=d d.video_00 ! queue ! ffdec_mpeg2video ! ffmpegcolorspace ! xvimagesink
+gst-launch filesrc location=./question.ts ! ffdemux_mpegts name=d d.audio_00 !  ffdec_mp3 ! audioresample ! osssink
+
+code:
+void playSound(boolean loop){
+	MediaPlayer mp = MediaPlayer.create(Sample_12_4.this, R.raw.music);
+	mp.setLooping(true);		//设置循环播放
+	mp.prepare();
+	mp.setVolume(1.0f, 1.0f);
+	mp.start();			//播放声音
+}
+void playSound(int sound, int loop) {   //播放声音的方法
+	SoundPool soundPool = new SoundPool(4, AudioManager.STREAM_MUSIC, 100);
+	soundPoolMap = new HashMap<Integer, Integer>();   
+	soundPoolMap.put(1, soundPool.load(this,R.raw.sound, 1));//加载声音
+	AudioManager mgr = (AudioManager)this.getSystemService(Context.AUDIO_SERVICE);   
+	float streamVolumeCurrent = mgr.getStreamVolume(AudioManager.STREAM_MUSIC);   
+	float streamVolumeMax = mgr.getStreamMaxVolume(AudioManager.STREAM_MUSIC);       
+	float volume = streamVolumeCurrent/streamVolumeMax;//得到音量的大小   
+	soundPool.play(soundPoolMap.get(sound), volume, volume, 1, loop, 1f);
+}
+
+9.gst-launch使用tcp协议来传输音频和视频
+一、传输mp3(声音)
+1、首先在一个控制台启动客户端（接收端）
+  gst-launch tcpserversrc host=127.0.0.1 port=3000 ! mad ! audioconvert ! alsasink
+2、再在另一个控制台启动服务端（发送端）
+gst-launch filesrc location=$HOME-PATH/test.mp3 ! tcpclientsink host=127.0.0.1 port=3000
+注意： 端口号可以更改 ，比如：3001
+二、传输视频（只有图像）
+1、 首先在一个控制台启动客户端（接收端）
+gst-launch tcpserversrc host=127.0.0.1 port=3001 ! dvddemux ! mpeg2dec ! xvimagesink
+2、再在另一个控制台启动服务端（发送端）
+gst-launch filesrc location=$HOME-PATH/one.mpg ! tcpclientsink host=127.0.0.1 port=3001
+三、同时传输声音和图像
+1、 首先在一个控制台启动客户端（接收端）
+gst-launch tcpserversrc host=127.0.0.1 port=3002 !  dvddemux  name=demuxer demuxer.  !     mpeg2dec ! queue ! ffmpegcolorspace ! sdlvideosink  demuxer. !  mad ! queue     !  audioconvert ! audioresample ! autoaudiosink
+2、再在另一个控制台启动服务端（发送端）
+gst-launch filesrc location=$HOME-PATH/one.mpg ! tcpclientsink host=127.0.0.1 port=3002
+
+
+10.音频命令行： 
+alsa_amixer
+alsa_amixer sget 'Main'
+alsa_amixer sset 'AnalogLoop' on
+alsa_amixer sset 'Main' 'inner speaker'            // reciver
+alsa_amixer sset 'Main' 'handsfree speech'         // speaker
+alsa_amixer sset 'Main' 'headset stereo'           // headset
+
+alsa_amixer sget 'OutputDevice'
+alsa_amixer sset 'OutputDevice' 0                  // speaker
+alsa_amixer sset 'OutputDevice' 3                  // reciver
+alsa_amixer sset 'OutputDevice' 6                  // headset
+alsa_amixer sset 'OutputDevice' 9                  // bt
+alsa_amixer sset 'OutputDevice' 12                 // speaker  + headset
+
+
+alsa_amixer cget numid=19,iface=MIXER,name='Analog Capture Volume'
+alsa_amixer cset numid=19,iface=MIXER,name='Analog Capture Volume'   5
+# alsa_amixer cget numid=1
+numid=1,iface=MIXER,name='Speaker Playback Volume'
+# alsa_amixer sset numid=30
+# alsa_amixer cset numid=30                       //////////////////////
+
+alsa_amixer sset 'Headset Playback Switch' '2'
+
+调试声音通道，用alsa_amixer命令，这是alsa的一个工具。
+查看当前状态以及支持的节点：alsa_amixer
+查看Main的通道情况：alsa_amixer sget 'Main'
+设置Main的通道情况：alsa_amixer sset 'Main' 'xxx’
+音频设备节点的设置目录为：
+/home/wangjunfeng/workspace/W711/out/target/product/W711/system/etc/asound.conf
+/home/wangjunfeng/workspace/W711/external/icebird/rootdir/etc/asound.conf
+
+
+Android Alsa 音量设置命令:
+alsa_amixer -c 0 sset ‘iSpeaker’,0 100%,100% unmute
+alsa_amixer -c 0 sset ‘LineOut’,0 100%,100% unmute
+
+为了调试声音必须每次重启media service之后重启
+setprop ctl.stop media
+setprop ctl.start media
+setprop audio.ringtone.route headset
+getprop audio.ringtone.route
+或者直接
+stop media
+start media
+也可以stop停止所有service,然后start启动所有service,这样彻底干净
+
+加载模块：insmod my.ko
+卸载模块：rmmod my.ko
+查看模块初始化/卸载时候的log：dmesg|grep module
+打开log：cat /proc/kmsg
+编译kernel：./build_kernel WG838
+替换模块：boot.image
+底层audio log的开关：
+echo 1 > sys/module/snd_brcm_omx/parameters/alsa_debug
+echo 1 > /sys/module/hal_audio_core/parameters/audio_core_debug
+
+killall logcat
+
+alsa_aplay -D AndroidPlayback_Speaker_normal  /cache/music/dial/0.wav
+alsa_aplay -D pcm.Dummy_AndroidPlayback_Speaker_normal  /system/media/audio/shutdownaudio.mp3
+alsa_aplay -D pcm.Dummy_AndroidPlayback_Headset  /system/media/audio/shutdownaudio.mp3
+alsa_aplay -D pcm.AndroidPlayback_Speaker_normal  /data/call_alex_lloyd.wav
+call_alex_lloyd.wav
+#madplay /cache/music/fancuo.mp3
+
+alsa_aplay -D AndroidPlayback_Speaker_normal /data/call_alex_lloyd.wav
+alsa_aplay -D pcm.AndroidPlayback_Speaker /data/call_alex_lloyd.wav
+alsa_aplay -D pcm.AndroidPlayback_Earpiece /data/call_alex_lloyd.wav
+
+alsa_amixer sset 'main' 0
+
+奇怪的是,android启动之后不能使用8k,8,mono进行录音,必须stereo才行
+之后做几次之后就可以使用mono了[luther.gliethttp],
+当然将/system/lib/hw/alsa.default.so去掉开机之后就可以正常直接使用alsa_arecord 1 &做录音了
+
+alsa_arecord -f cd 1 &
+alsa_arecord -f dat -r 8 1 &
+alsa_arecord -f dat 1 &
+alsa_arecord -t au -f dat -r 8 1 &
+alsa_arecord -r 44100 1 &
+alsa_arecord 1 &
+alsa_arecord -c 2 1 &
+killall alsa_arecord madplay alsa_aplay hexdump logcat
+
+alsa_amixer sset 'PCM' 50%
+alsa_amixer sset 'Micphone12 Mux' mic1
+alsa_amixer sset 'Micphone12 Mux' mic2
+
+alsa_amixer sset Headset mute
+alsa_amixer sset Headset unmute
+
+alsa_amixer sset Earpiece mute
+alsa_amixer sset Earpiece unmute
+
+shell下的常用命令
+ps
+top
+cat /proc/cpuinfo
+free
+cat /proc/meminfo
+busybox df -h
+
+cat /proc/interrupts; sleep 2; cat /proc/interrupts;
+grep -i cpu /var/run/dmesg.boot
+dmesg | grep -i cpu
+
+
+fm命令行：
+fmtest
+
+
+11.使用jar的方法：
+一.在android.mk中添加LOCAL_STATIC_JAVA_LIBRARIES := SimInterface\
+                                                  cmmbplayjinjava
+二.在使用的地方导入包名称：import com.innofidei.cmmb.SimInterface;
+		      import com.cmmbplay.CmmbPlay;
+三.按照常用方式引用：mSimInterface = new SimInterface(mContext);
+            	 mSimInterface.InitSimInterface();
+
+12.引用so的方法：
+一.在android.mk中添加
+	LOCAL_STATIC_LIBRARIES += libMbbmSim\
+                                  libCmmbPlayerjin
+二.在使用的地方导入包名称：
+	static {
+		System.loadLibrary("CmmbPlayerjin");
+	}
+三.按照常用方式引用：...
+
+
+
+13. ubuntu切换默认jdk的方法：
+由于ubuntu中可能会有默认的jdk，如openjdk，所以，为了使默认使用的是我们安装的jdk，还要进行如下工作。执行代码:
+update-alternatives --install /usr/bin/java java /usr/lib/jvm/java/jdk1.6.0_12/bin/java 300
+update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/java/jdk1.6.0_12/bin/javac 300
+
+通过这一步将我们安装的jdk加入java选单。然后执行代码:
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
+通过这一步选择系统默认的jdk,这样，再在shell中输入代码:
+java -version
+就会显示系统使用的java是sun的java。
+
+
+ ./emulator -avd android4.0_API14_WSVGA
+
+tcpdump -i any -s 0 -w /data/cmmb.pcap
+
+
+stack --symbols-dir=./out/target/product/T8100/symbols ramdump
+./stack4.sh --symbols-dir=./out/target/product/S899t/symbols ramdump
+
+
+通过以下串口命令修改system属性：
+mount -o remount,rw /dev/block/mtdblock2 /system
+chmod 777 android.so
+
+通过USB线修改root权限：
+adb shell
+cd /data/local
+echo "123" > rootable
+
+exit
+adb root
+adb shell
+mount -o remount,rwmount -o remount,rw /dev/block/mtdblock2 /system;
+
+cp /mnt/sdcard/sensor.ko  /system/lib/modules/
+adb remount
+
+ll Gallery.apk
+
+chown system:input /sys/class/input/input6/proximity_onoff
+
+surface获取的过程：
+SurfaceView mSurfaceView = (SurfaceView) findViewById(R.id.surface);
+SurfaceHolder mSurfaceHolder = mSurfaceView.getHolder();
+mSurfaceHolder.addCallback(PlayerActivity.this);
+在回调函数中surfaceCreated（）才是获取surface最佳时机：
+Surface surface = mSurfaceView.getHolder().getSurface();
+
+
+JNI的实现过程：
+java<-->c++
+
+
+start --plan Android -t android.app.cts.ActivityManagerTest#testGetRunningServices    --- 单跑某一条case
+
+
+利用logcat打印调用堆栈：
+java:
+import static junit.framework.Assert.assertTrue;
+assertTrue(0 == i);
+主动做anr: kill -3 pid
+C++:
+//assert(false);
+abort();
+setProperty（）;
+
+alsa代码地址：http://android.git.kernel.org/?p=platform/hardware/alsa_sound.git;a=summary
+
+
+1、首先我们需要使用以下命令实时监视系统信息
+sudo tail -f /var/log/messages
+2.插入usb线连接手机，记录idVendor
+Jun 13 18:17:57 MagicLinux kernel: usb 2-1: New USB device found, idVendor=0bb4, idProduct=0c02
+3.把idVendor写入到.android目录下的adb_usb.ini文件，
+4.sudo ./adb kill-server再sudo ./adb devices, adb logcat即可
+
+你可以很方便的使用lsusb命令查看自己的USB ID
+shily@hh-desktop:~$ lsusb
+Bus 002 Device 003: ID 413c:2003 Dell Computer Corp. Keyboard
+Bus 002 Device 002: ID 0461:4d22 Primax Electronics, Ltd
+Bus 002 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 001 Device 010: ID 18a1:0002
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+找到上面的id是18a1,在文件中添加我的设备就可以了。
+SUBSYSTEM=="usb", SYSFS{idVendor}=="18a1", MODE="0666"
+修改/etc/udev/rules.d/51-android.rules不需要重启Linux机器，重新插拔一下设备就可以了。再次运行adb devices就可以看到你的设备已经连接
+
+如果你知道usb设备的设备文件，在获得idVendor时也可以使用其他命令，如:
+udevinfo -a -p /sys/class/usb_device/...
+udevinfo -e
+
+拷贝到终端执行脚本mmstat.sh，可以打gst的log
+
+#include <cutils/properties.h>
+property_set("downanimation.end", "1");
+("1".equals(SystemProperties.get("downanimation.end", "0")))
+
+c执行命令
+execl( "/system/bin/cat", "cat", "/proc/audio", addr, 0);
+
+java执行系统命令：
+Process p = Runtime.getRuntime().exec("alsa_amixer sset 'Main' 'inner speaker'");
+Process p = Runtime.getRuntime().exec("alsa_amixer sset 'Main' 'handsfree speech'");
+
+C执行系统命令：
+执行系统命令：int nRet = system("alsa_amixer sset 'AnalogLoop' off");
+
+
+ubuntu没有声音：
+wangjunfeng@wangjunfeng-computuer:~$ head -n 1 /proc/asound/card0/codec*
+Codec: Realtek ALC887
+wangjunfeng@wangjunfeng-computuer:~$ sudo gedit /etc/modprobe.d/alsa-base.conf
+末尾添加：
+options snd-hda-intel index=0
+options snd-hda-intel model=generic
+重启声音：
+sudo /sbin/alsa force-reload
+设置title上面的小喇叭->声音首选项->输出
+
+
+IMPLEMENT_META_INTERFACE(AudioPolicyService, "android.media.IAudioPolicyService");
+
+
+content://media/external/images/media
+file:///mnt/sdcard/MVI_3131.AVI
+
+
+java防止重入的方法为：synchronized(mAudioFocusLock){}
+
+
+mdpi zh_CN en_US es_ES tr_TR it_IT
+
+
+可以一次打开LOGV，LOGI，LOGD，也可以分别打开：
+#undef NDEBUG //打开LOGV/LOGI/LOGD
+#define LOG_NDEBUG 0 //打开LOGV
+#define LOG_NIDEBUG 0 //打开LOGI
+#define LOG_NDDEBUG 0 //打开LOGD
+
+第一步：在对应的mk文件中加入:LOCAL_LDLIBS := -llog
+第二步：在要使用LOG的cpp文件中加入：
+#include <android/log.h>
+#ifndef LOG_TAG
+#define LOG_TAG "Tag"
+#endif
+#define LOGD(...) __android_log_write(ANDROID_LOG_ERROR,"Tag","Message")
+#include <utils/Log.h>
+LOGD（“Hello%d”, 123）；
+.mk文件：
+LOCAL_LDLIBS:=  -L$(SYSROOT)/usr/lib -llog
+
+举例，如果要看AndroidRuntime的LOGI和LOGD，可以有这样2种写法：
+方法一:NDEBUG-LOG_NDEBUG=LOG_NIDEBUG +LOG_NIDEBUG
+#define LOG_TAG "AndroidRuntime"
+#undef NDEBUG
+#define LOG_NDEBUG 1
+#include <utils/Log.h>
+方法二:LOG_NIDEBUG +LOG_NIDEBUG
+#define LOG_TAG "AndroidRuntime"
+#define LOG_NIDEBUG 0
+#define LOG_NDDEBUG 0
+#include <utils/Log.h>
+
+修改权限：sudo chmod 0777 * -R
+
+
+// T8100
+stack --symbols-dir=./out/target/product/T8100/symbols ramdump
+
+adb push /home/wangjunfeng/workspace/T8100/out/target/product/T8100/system/lib/libaudiopolicy.so /system/lib
+adb push /home/wangjunfeng/workspace/T8100/out/target/product/T8100/system/lib/libaudio.so /system/lib
+adb push /home/wangjunfeng/workspace/T8100/out/target/product/T8100/system/lib/alsa.default.so /system/lib/hw
+adb push /home/wangjunfeng/workspace/T8100/out/target/product/T8100/system/lib/acoustics.default.so /system/lib/hw
+adb push /home/wangjunfeng/workspace/T8100/out/target/product/T8100/system/lib/libaudioflinger.so /system/lib
+adb push /home/wangjunfeng/workspace/T8100/out/target/product/T8100/system/framework/framework.jar /system/framework/
+
+adb push /home/wangjunfeng/workspace/T8100/out/target/product/T8100/system/app/MobileTV.apk /system/app
+
+
+//WG838
+stack --symbols-dir=./out/target/product/bcm2157/symbols ramdump
+
+
+
+cat init.rc
+insmod /system/lib/modules/2.6.35.7+/kernel/drivers/media/cmmb/siano/smsmdtv.ko
+rmmod /system/lib/modules/2.6.35.7+/kernel/drivers/media/cmmb/siano/smsmdtv.ko
+lsmod
+
+PRODUCT_LOCALES :=mdpi zh_CN zh_TW en_US es_ES tr_TR it_IT ko_KR ja_JP
+T8301-user-{mdpi,zh_CN,zh_TW,en_US,es_ES,tr_TR,it_IT,ko_KR,ja_JP,ru_RU,nodpi}
+
+
+ogg:  VORBIS_PLAYER
+midi: SONIVOX_PLAYER
+STAGEFRIGHT_PLAYER/PV_PLAYER
+
+
+vboxheadless -s AndroidVM
+VBoxManage storageattach AndroidVM --storagectl "IDE Controller" --port 1 --device 0 --type hdd --medium /home/wangjunfeng/.VirtualBox/HardDisks/AndroidSD.vdi
+VBoxManage storagectl AndroidVM --name "IDE Controller" --add ide
+
+
+search:(startOutput|stopOutput)
+
+018
+0071-2
+BPAABBA1C1400071-2
+
+//WP8800 - > Speaker, EarPiece, HSetOut, Mic, HSetIn, FMTX, FMRX
+ste-adm-test play /data/call_alex_lloyd.wav
+ste-adm-test play /data/call_alex_lloyd.wav EarPiece
+ste-adm-test play /data/call_alex_lloyd.wav Speaker
+ste-adm-test play /data/call_alex_lloyd.wav HSetOut
+ste-adm-test play /mnt/sdcard/Music/楚歌.mp3 HSetOut
+ste-adm-test play /mnt/sdcard/Music/楚歌.mp3 EarPiece
+ste-adm-test play /data/call_alex_lloyd.wav BTOut
+ste-adm-test play /data/data/com.android.speechrecorder/app_recordings/call_adam_varro.wav HSetOut -sr 11025 -ch 1
+ste-adm-test play /data/4.pcm Speaker -sr 1600 -maxtime 2200 -mintime 1800
+ste-adm-test play /data/4.pcm HSetOut -sr 1600 -ch 1
+ste-adm-test play /data/4.pcm EarPiece
+ste-adm-test play /data/4.pcm
+ste-adm-test map Mic PHF_MDRC1_IN
+ste-adm-test record /data/4.pcm Mic -sr 48000 -ch 1 -bytes $((2*48000*2)) -mintime 1800 -maxtime 2200 -no_stereo_silence
+ste-adm-test record /data/4.pcm HSetIn -sr 48000 -ch 1 -bytes $((2*48000*2)) -mintime 1800 -maxtime 2200 -no_stereo_silence
+ste-adm-test play /data/data/com.android.speechrecorder/app_recordings/call_adam_varro.wav HSetOut
+ste-adm-test play /data/data/com.android.speechrecorder/app_recordings/call_alex_lloyd.wav Speaker
+ste-adm-test play /data/test.wav Speaker
+ste-adm-test play /data/test.wav EarPiece
+
+ste-adm-test vctx_volume -600
+ste-adm-test vcrx_volume -600
+
+
+setprop ste.debug.anm.log "INFO INFO_V WARN ERR"
+setprop ste.debug.adm.log "INFO INFO_V D2D D2D_V OMXIL OMXIL_V OMXIL_FL ADIL ADIL_FL ADIL_INT DB_V DB STATUS WARN ERR"
+
+Effect: 
+system/lib/libfilterfw.so 
+system/lib/libfilterpack_imageproc.so
+system/app/CameraEffectsRecordingSample.apk 
+system/app/CameraEffectsRecordingSample.apk
+system/framework/filterfw.jar
+
+cd vendor/st-ericsson/multimedia/linux/build/
+mm DIRS_TO_BUILD=audio/adm
+
+mm DIRS_TO_BUILD=audio/ld_anm
+
+
+======================================================================
+#电话接通后试一下手工修改下面2个寄存器：调整音量，接通两个耳机
+0x47 : 0x00
+0x16 : 0x00
+0x0A : 0x00
+
+
+echo 0x0D > /sys/kernel/debug/ab8500/register-bank
+
+echo 0x47 >  /sys/kernel/debug/ab8500/register-address
+echo 0x00 >  /sys/kernel/debug/ab8500/register-value
+
+echo 0x16 >  /sys/kernel/debug/ab8500/register-address
+echo 0x00 >  /sys/kernel/debug/ab8500/register-value
+
+echo 0x0A  /sys/kernel/debug/ab8500/register-address
+echo 0x00 >  /sys/kernel/debug/ab8500/register-value
+
+echo 0x4F>  /sys/kernel/debug/ab8500/register-address
+echo 0x00 >  /sys/kernel/debug/ab8500/register-value
+
+echo 0x50 /sys/kernel/debug/ab8500/register-address
+echo 0x00 >  /sys/kernel/debug/ab8500/register-value
+
+cat /sys/kernel/debug/ab8500/all-bank-registers
+
+======================================================================
+#U8500 切换gpio221 FM=1 lc1711=0
+#         gpio222 BT=0 lc1711
+
+cd /sys/class/gpio/
+echo 221 > export
+cd gpio221
+echo out > direction
+echo 1 > value
+cat value
+
+cd /sys/class/gpio/
+echo 222 > export
+cd gpio222
+echo out > direction
+echo 0 > value
+cat value
+
+======================================================================
+#T8808D modem1, default AP gpio142=1, PA gpio95=0 , modem gpio142=1
+cd /sys/class/gpio/
+echo 142 > export
+cd gpio142
+echo out > direction
+echo 1 > value
+cat value
+
+cd /sys/class/gpio/
+echo 95 > export
+cd gpio95
+echo out > direction
+echo 1 > value
+cat value
+
+============================================================================
+#T8808D modem2
+
+cd /sys/class/gpio/
+echo 142 > export
+cd gpio142
+echo out > direction
+echo 0 > value
+cat value
+
+cd /sys/class/gpio/
+echo 95 > export
+cd gpio95
+echo out > direction
+echo 1 > value
+cat value
+
+======================================================================
+adb push /home/wangjunfeng/workspace/temp/lib_temp/open_muxs /system/bin/
+adb shell
+open_muxs
+AT+SSAM=0
+AT+SSAM=1
+AT+SSAM=2
+AT+VGR=0
+AT+VGR=9
+AT+CMUT=0
+AT+SDMUT=0
+
+
+make -j8 update-api framework
+make systemimage -j4
+make userdataimage -j4
+make ramdisk -j4
+make bootimage -j4; make bootimage -j4
+make snod -j4
+make uboot
+
+fastboot flash system system.img
+fastboot flashall
+
+sudo apt-get install uboot-mkimage
+make bootimage
+
+./mk -o=TARGET_BUILD_VARIANT=eng Y518-T00 n
+./makeMtk Y518-T00 r k
+./makeMtk Y518-T00 bootimage
+./makeMtk Y518-T00 new
+
+mount -t debugfs none /sys/kernel/debug
+mount -t debugfs none /data/debug
+cd /sys/kernel/debug
+cat gpio
+
+
+alsa_amixer cset -c sprdphone name='Speaker Playback Switch' 0
+alsa_amixer cset -c sprdphone name='Earpiece Playback Switch' 0
+alsa_amixer sset 'Micphone' 2
+alsa_amixer sset 'PCM' 100%
+
+alsa_amixer sset 'PCM' 'Earpiece'
+
+
+cat /sys/modem_switch/switch_audio
+echo modem > /sys/modem_switch/switch_audio
+
+
+# Make boot.img   ---检查 kernel_out/CP7728/.config
+out/host/linux-x86/bin/mkbootimg --kernel out/target/product/CP7728/zImage --ramdisk out/target/product/CP7728/ramdisk.img --base 0 --output out/target/product/CP7728/boot.img
+
+sudo ./flasher -t ontim_wp8800_hz3 -L -w /flash0/TOC/SUBTOC/BOOT=./boot.img
+
+
+find | xargs touch
+find -name hello ./
+find -name [hH]ello ./
+
+
+find . | xargs touch
+
+grep -rin -P '(s_open)|(s_close)' ./alsa_default.cpp
+
+
+//抓取log，同时保存屏幕输出到文件, 并搜索AudioHardwareALSA和AudioPolicyManager
+adb logcat -v time -b main -b radio -system -b events -k | tee logcat | grep -rinP 'AudioHardwareALSA|AudioPolicyManager'
+
+cat /proc/kmsg
+
+
+grep -rin -P '(setMode)|(td_cscall_callback)' ./CP7728_Dulsim_Switch_4.log
+
+
+T8808DFM问题总结
+1. FM启动退出时设置的音频设备和当前不一致
+2. PA开关
+3. 切换有时不生效
+4. Speaker时所有声音外放
+
+
+录音冲突处理的时候：
+String action = intent.getAction();
+String cmd = intent.getStringExtra("command");
+条件：mIntentReceiver.onReceive action=com.android.music.musicservicecommand, cmd=pause
+
+
+Sanya-PA 87
+echo 87 > /sys/ontim_dev_debug/gpio/gpio_num
+echo 0 > /sys/ontim_dev_debug/gpio/value
+
+cd /sys/ontim_dev_debug/gpio
+echo 87 > gpio_num
+echo 0 > value
+
+   
+2  在framework层 AudioManager.java 中增加 GetDtsMode() 和 SetDtsMode(int iFlag) 函数
+   供应用设置打开DTS功能用. 
+   此设置函
+
+
+
+
+U8500切换USB：*#*#2046#*#*
+
+
+java -Xmx2048m -jar out/host/linux-x86/framework/signapk.jar -w vendor/ontim/S899t/security/releasekey.x509.pem vendor/ontim/S899t/security/releasekey.pk8 /tmp/tmp1YbmAs out/target/product/S899t/S899t_S-2-20_8037.P4280-ota.zip
+java -Xmx2048m -jar out/host/linux-x86/framework/signapk.jar -w vendor/huawei/hwT8808D/security/releasekey.x509.pem vendor/huawei/hwT8808D/security/releasekey.pk8 ./PhoneDualSim.apk out/PhoneDualSim.apk
+
+
+
+sim1抓双方的modem log和audio 的log，以及双方的pcm数据，
+Start: mmprobed -e 10,15,19,22,,24,25,26,27,28,30,31 -s /sdcard/mmprobe/ -c start
+Stop: mmprobed stop
+
+
+adb shell
+cat /proc/wakelocks
+
+dumpsys power
+
+echo 1 > /sys/power/wake_lock
+
+
+// WAVE音频采样频率是8khz 
+// 20ms读一次数据，amr压缩要求20ms数据
+// 音频样本单元数 = 8000*0.02 = 160 (由采样频率决定)
+// 声道数 1 : 160
+//       2 : 160*2 = 320
+// bps决定样本(sample)大小
+// bps = 8 --> 8位 unsigned char
+//       16 --> 16位 unsigned short
+
+
+
+apk文件的反编译，需要的工具apktool（反编译资源文件）和dex2jar-0.0.7.9-SNAPSHOT（反编译源码）
+
+1.配置apktool
+在命令行输入下面命令（只输入$以后的命令语句）
+www.linuxidc.com@linuxidc:~$ sudo ln -s /home/ww/apktool/apktool（自己的apktool文件所在的位置） /usr/bin/apktool （配置全局）
+www.linuxidc.com@linuxidc:~$ apktool
+
+2.反编译的目标apk文件
+
+1).反编译资源文件
+命令行进入要反编译的apk文件所在的文件夹
+www.linuxidc.com@linuxidc:~$ apktool d xxx.apk（apk路径）ABC（文件夹名称，这是自命名，可以不写，如果不写，则默认当前apk的文件名）
+
+2).反编译源码（反编译class.dex）
+命令行进入dex2jar-0.0.7.9-SNAPSHOT根文件夹
+首先解压目标apk文件，得到class.dex。把class.dex拷贝到dex2jar-0.0.7.9-SNAPSHOT文件夹中
+命令行执行
+www.linuxidc.com@linuxidc:~$sh dex2jar.sh classes.dex 
+执行完毕之后，会在dex2jar-0.0.7.9-SNAPSHOT文件夹中生成一个classes.dex.dex2jar.jar的文件，这个文件就是反编译源码的压缩文件。
+
+
+3.查看反编译之后的源码
+由于反编译之后的源码是.class文件，所以要用专有的软件才能看。
+解压classes.dex.dex2jar.jar文件，用JD-GUI工具查看就可以了。
+
+
+
+sudo add-apt-repository ppa:chromium-daily/ppa
+sudo apt-get update
+sudo apt-get install chromium-browser
+
+./configure
+make
+make install
+
+skype：
+用户名： ontimtest  ontimtest2  ontimtest3 ontimtest4
+密码都是 ontim6137
+
+WLAN:
+NETGEAR:ontim123456789
+001D73B1FBB7:heart2011!
+
+
+如何打印一个__int64? 
+%[flags] [width] [.precision] [{h | l | I64 | L}]type
+long int l d, i, o, x, or X  
+long unsigned int l u  
+short int h d, i, o, x, or X  
+short unsigned int h u  
+int64 I64 d, i, o, u, x, or X
+printf("%ld, %lu, %I64", long int, long unsigned int, int64);
+
+命令行快捷键：
+Ctrl+Shift+C 拷贝
+Ctrl+Shift+V 粘贴
+
+添加命令行启动方式：
+sudo ln -s /home/fish/Software/Sublime/sublime_text /usr/bin/sublime
+
+添加桌面快捷方式,新建文件：
+[Desktop Entry]
+Version=1.0
+Name=Sublime Text 2
+GenericName=Text Editor
+
+Exec=sublime
+Terminal=false
+Icon=/home/fish/Software/Sublime/Icon/48x48/sublime_text.png
+Type=Application
+Categories=TextEditor;IDE;Development
+X-Ayatana-Desktop-Shortcuts=NewWindow
+
+[NewWindow Shortcut Group]
+Name=New Window
+Exec=sublime -n
+TargetEnvironment=Unity
+
+修改文件关联列表文件就行了
+sudo sublime /usr/share/applications/defaults.list
+
+安装
+sudo apt-get install vim-gtk vim-doc cscope
+:cscope show 显示cscepe连接
+:cscope add ..../cscope.out 添加cscope连接
+
+gvim拷贝数据到其他程序：Shift_"_+,再y就拷贝到来系统粘贴板
+gvim FileName +n 打开文件FileName并跳转到n行
+/etc/vim/gvimrc/可以映射快捷键:
+唯一实例：可修改sudo vim /usr/share/applications/gvim.desktop，把Exec=gvim -f %F替换为Exec=gvim --servername GVIM --remote-tab %F即可
+
+i 在光标位置前插入模式,a在光标位置后插入模式，o在当前行末尾插入一行，O在当前行首插入一行
+v 可视模式,从当前光标位置a开始，移动到位置b，按下y，拷贝从位置a到位置b之间的字符串到缓存，在位置c按下p粘贴，或者在其他程序按下ctrl_shit_v粘贴, =格式化对齐选的块, v进入字符可视模式, V进入行可视模式, Ctrl_v进入块可视模式
+: ex模式
+
+:edit .编辑目录
+:split 分割窗口
+:scriptnames 显示当前加载的vim文件
+
+command模式：
+rx替换当前光标处的一个字符为x
+Rxxx替换当前光标处的3个字符为xxx
+C删除当前位置到行尾并置插入模式
+cc删除当前行
+x向后删除光标处的字符
+X向前删除光标出的字符
+dd删除当前行
+D删除当前光标到行尾
+p粘贴到下一行(yy时)，粘贴到光标后（y或者D或者C时）
+P粘贴到上一行(yy时)，粘贴到光标前（y或者D或者C时）
+o在当前行的下面再起一行，并置插入模式
+O在当前行的上面再起一行，并置插入模式
+u回退改动
+J删除当前行和下一行的换行符
+S删除当前行并置插入模式
+Ctrl_R翻转回退（撤销）
+Ctrl_P自动补全当前函数或者单词
+
+y 复制，适用于选择文本后再按y复制
+yw 复制一个单词（包括空格）
+ye 复制一个单词（不包括空格）
+yy 复制一整行，类似dd删除一整行(包括行尾换行符）
+Y 复制一整行（包括行尾换行符），不同于D删除到行尾（不包括换行符）
+
+help insert查询insert的相关帮助
+
+hjkl，左下上右
+w下一个单词, b上一个单词
+GG文件末尾, gg文件起始
+123G 或者：123gg 转到123行 
+/www 向下搜索www，n下一个，N上一个
+/www\|nnn同时搜索www和nnn
+？www 向上搜索www，n下一个，N上一个
+i光标前插入，I行首插入
+a光标后插入, A行尾插入
+o当前行末尾再插入一行，并置插入模式, O当前行前尾再插入一行，并置插入模式
+$移动光标到行尾,同<End> , 0移动光标到行首,同<Home>，包含空格 , ^移动光标到行首,不包含空格
+.重复之前的编辑命令
+Ctrl_p 向前智能匹配，智能提示，自动补全
+Ctrl_n 向后智能匹配，智能提示，自动补全
+Ctrl_U窗口向上滚动半屏幕
+Ctrl_D窗口向下滚动半屏幕
+Crtl_b窗口向上滚动一屏幕
+Crtl_f窗口向下滚动一屏幕
+
+''上一个位置跳转
+Ctrl_O切换到更早一点光标停靠的位置
+Ctrl_I切换到更新一点光标停靠的位置
+%匹配当前光标处的括号等
+*向下查找当前光标处的word,通gd
+#向上查找当前光标处的word 
+[I在当前文件查找光标位置的单词，并列表显示
+Ctrl+w+w切换光标焦点
+Ctrl_G显示当前位置
+Ctrl_^切换文件
+c{motion}删除motion跨过的字符，删除并进入插入模式
+d{motion}删除motion跨过的字符，但是不进入插入模式
+D或者C删除到行尾
+gd 移动到光标所处的变量的定义处
+gf可以打开光标当前include的文件
+K在man里搜索光标所在的词
+gg=G在command mode下使用indent从文件开始自动对齐到结束, 80G=100G从80行自动对齐到100行
+mx标记当前位置为x，
+'x跳转到标记位置x
+'跳转到上一个标记位置
+"跳转到上一个编辑位置
+[最后修改的位置的开头 
+]最后修改的位置的结尾 
+:marks命令取得所有的标记的列表
+vbookmark的两个命令
+mm添加除当前的位置为标记
+mn跳转下一个标记
+mp跳转上一个标记
+ma清除所有标记
+
+几个ex常用命令:delete缩写为d, move缩写为m, copy缩写为co,还有一个缩写是t
+对于ex来说，行尤为重要，在编辑的时候，你可以用.来表示当前行，$来表示最后一行，而%最代表每一行，使用%的话，相当于1,$，+/-放到行号前面时表示在行号上加上或者减去后面的数值, 这些东西能和显式的行号搭配使用, 
+. 表示当前行       :.,10m$ 将当前行到20行移动到文件末尾
+$ 文件最后一行     :5,$d 从第五行删除至文件末尾
+% 文件的每一行,即全篇
+:q! 不保存，强制退出
+:wq 保存，退出
+:e 重新加载当前文件
+:e!忽略改动，重新加载当前文件
+:jumps列表所有跳转
+:!cmd执行cmd命令
+:ls 显示缓冲区 
+:cd 显示当前文件夹
+:e FileName 编辑文件
+.重复上次命令
+:s当前行查找替换字符串
+在一行内替换头一个字符串 old 为新的字符串 new，请输入 :s/old/new 
+在一行内替换所有的字符串 old 为新的字符串 new，请输入 :s/old/new/g 
+在两行内替换所有的字符串 old 为新的字符串 new，请输入 :.,.+2s/old/new/g 
+在文件内替换所有的字符串 old 为新的字符串 new，请输入 :%s/old/new/g 或者:%s/old/new 
+在全文内替换时询问用户确认每个替换需添加 c 选项，请输入 :%s/old/new/gc 
+:%s/字符串//gn  将查找全文中该字符串的出现次数
+:g/xxx/s/yyy/zzz/g    匹配包含xxx的行，把其中的yyy替换成zzz
+ global具体自行方法是 g/pattern/command, 
+:g/pattern 在全局找pattern出现的最后位置
+:g/pattern/p 找到包含模式的所有行
+:g!/pattern/p 找到所有不包含模式的行
+:g/abc\|123/p 或者:g/abc\|123-> 查找并显示出只有abc和123的行 (only print line with “abc” or "123"), 
+:g/abc/d -> 删除所有有abc的行 (delete all line with “abc”), 
+:v/abc/d -> 这个会把凡是不是行里没有abc的都删掉 (delete all line without “abc”)
+:%!xxd 把当前文件转化为十六进制显示, %行，！本地，xxd用xxd打开
+:%!xxd -g 1 把当前文件转化为十六进制显示， -g 1 一个字节为一组
+:%!xxd -r   切换回到文本显示，再保存十六进制的改动
+:3,18d 删除3到18行
+:150,180m23 把150到180这个块移动到23行后面
+:23,38co100把前面的部分拷贝到100行后面
+:230,$w newfile  把230到末尾的内容保存到newfile中
+:.,1000w >>someone 把当前行到1000行的内容追加到新文件的末尾去
+:.,.+20 当前行到当前行后的20行
+:/pattern/d  删除模式后面一行
+:/pattern/+d 删除模式后面一行的下一行
+:/pattern1/,/pattern2/d 删除模式1第一行到包括模式2的第一行
+:r filename  在光标所在行之后插入指定文件的内容
+:line r filename  在第line行之后插入指定文件的内容
+
+常用行编辑命令：
+1. 开启行号:set nu 
+2. 将1-5行的内容复制到第8行:1,5 co 8
+3. 将1-5行的内容移动到第8行:1,5 m 8
+4. 将1-5行内容删除:1,5 d
+5. 将file.log 插入到当前编辑的文件第一行下面:1 r file.log
+6. 将两行合并成一行,可以在当前行输入'J'
+7. 推出vim ZZ
+8. 替换当前字符r
+9. 替换当前光标到行尾R
+10.替换当前行S
+11.删除当前光标到行尾D
+12.剪切当前光标到行尾并置为插入模式C
+
+:!vimdiff ./test1.c ./test2.c
+
+宏录制：
+qw开始把后续操作录制到w寄存器中，再q停止录制
+10@w循环10遍执行w寄存器的操作
+
+
+删除命令操作
+dl 删除当前字符（与x命令功能相同）
+d0 删除到某一行的开始位置
+d^ 删除到某一行的第一个字符位置（不包括空格或TA B字符）
+dw 删除到某个单词的结尾位置
+d3 w 删除到第三个单词的结尾位置
+db 删除到某个单词的开始位置
+dW 删除到某个以空格作为分隔符的单词的结尾位置
+dB 删除到某个以空格作为分隔符的单词的开始位置
+d7B 删除到前面7个以空格作为分隔符的单词的开始位置
+d） 删除到某个语句的结尾位置
+d4） 删除到第四个语句的结尾位置
+d（ 删除到某个语句的开始位置
+d} 删除到某个段落的结尾位置
+d{ 删除到某个段落的开始位置
+d7 { 删除到当前段落起始位置之前的第7个段落位置
+dd 删除当前行
+d/text 删除从文本中出现“text”中所指定字样的位置，一直向前直到下一个该字样所出现的 位置（但不包括该字样）之间的内容
+dfc 删除从文本中出现字符“c”的位置，一直向前直到下一个该字符所出现的位置（包括 该字符）之间的内容
+dtc 删除当前行直到下一个字符“ c”所出现位置之间的内容
+D 删除到某一行的结尾
+d$ 删除到某一行的结尾
+5dd 删除从当前行所开始的5行内容
+dL 删除直到屏幕上最后一行的内容
+dH 删除直到屏幕上第一行的内容
+dG 删除直到工作缓存区结尾的内容
+d1G 删除直到工作缓存区开始的内容
+
+修改命令操作
+cl  更改当前字符
+cw  修改到某个单词的结尾位置
+c3w 修改到第三个单词的结尾位置
+cb  修改到某个单词的开始位置
+cW  修改到某个以空格作为分隔符的单词的结尾位置
+cB  修改到某个以空格作为分隔符的单词的开始位置
+c7B 修改到前面7个以空格作为分隔符的单词的开始位置
+c0  修改到某行的结尾位置
+c） 修改到某个语句的结尾位置
+c4）修改到第四个语句的结尾位置
+c(  修改到某个语句的开始位置
+c}  修改到某个段落的结尾位置
+c{  修改到某个段落的开始位置
+c7{ 修改到当前段落起始位置之前的第7个段落位置
+ctc 修改当前行直到下一个字符c所出现位置之间的内容
+C   修改到某一行的结尾
+cc  修改当前行
+5cc 修改从当前行所开始的5行内容
+
+列选择
+
+
+目前设置的快捷键：
+F2打开显示NERDTree,
+F3打开显示Tlist
+
+:NERDTree 启动NERDTree
+Bookmark A658t_audio_hal 设置书签, 键盘输入大写字母Ｂ，可将其设为on（再按就可将书签功能取消）
+常用命令
+    NERDTreeToggle “打开 关闭树
+        NERDTree [<start-directory> | <bookmark>]   “这个配合标签用起来很爽
+        NERDTreeFind “在树中找到当前文件
+        Bookmark <name> “mark个书签
+        BookmarkToRoot <bookmark> “打开书签并设置为root，用pwd查看当前工作目录
+        ClearBookmarks [<bookmarks>] “清除书签, 或者在bookmark里面输入大写D可删除 
+
+:tabnew 新建标签页 
+:tabs 显示已打开标签页的列表 
+:tabc 关闭当前标签页 
+:tabn 下一个tab 
+:tabp 上一个tab 
+:tabn n 切换到第n个tab 
+:tabfirst 第一个tab 
+:tablast 最后一个tab
+ngt切换到第n个tab窗口
+
+:tag out_write 跳转到out_write函数定义位置
+x展开缩小taglist的window
+
+
+vim正则表达式实例:
+:27,39 s/^/\/\//g 在27到39行首插入//
+:%s!\ s*//.*!!  去掉所有的“//”注释, 27,39 s*//*去掉27到39行的//
+:%s!\s*/\*\_.\{-}\*/\s*! !g   去掉所有的“/* */”注释
+
+
+Regular Expressions
+ultraEdit的perl的表达式：(setMode)|(IN_CALL)
+ubuntu的perl正则表达式：setMode|IN_CALL
+ubuntu(gvim:/)unix正则表达式:setMode\|IN_CALL
+或者搜索整个单词即grep -rin '\<setMode\>\|\<IN_CALL\>' ./
+（Perl）grep -rinP 'setMode|IN_CALL' ./
+
+
+
+frameworks/base/telephony/java/com/android/internal/telephony/CallManager.java
+
+
+
+static const int64_t LOCAL_SOURCE_TIMEOUT_NS = seconds(2);
+
+
+	 //LOGD("Read data s");
+        int result = -1;
+        fd_set readfds;
+        struct timeval tv;
+        tv.tv_sec  = 1;
+        tv.tv_usec = 0;
+        FD_ZERO(&readfds);
+        FD_SET(fdDataRead, &readfds);
+
+        result = ::select(fdDataRead + 1, &readfds, NULL, NULL, &tv);
+        if (result < 0) 
+        {
+            LOGE("RECORD_TEST: select /dev/ts0710muxs12 fail.  fd:%d ERROR %s", fdDataRead, strerror(errno));
+            return UNKNOWN_ERROR;
+        } 
+        else if (result == 0) 
+        {
+            LOGE("RECORD_TEST: select /dev/ts0710muxs12 timeout");
+            return UNKNOWN_ERROR;
+        }
+
+
+cat /proc/wakelocks
+service list
+dumpsys media.audio_policy
+dumpsys media.audio_flinger
+dumpsys notification
+getService
+dumpstate > /data/dumpstate.txt
+
+崩溃调用堆栈地址：
+/data/tombstone/
+
+????????  No Permission
+sudo gedit /etc/environment
+添加环境变量
+
+
+更新adb链接：
+android update adb
+
+
+把kernel的log输出到本地或者手机上的方法
+1.输出到手机上
+./adb shell
+#cd /data/anr
+#cat /proc/kmsg /data/kernel.txt
+这时kernel.txt放在emulator中的/data/anr下。
+2.输出到本地
+./adb shell cat /proc/kmsg > kernel.txt
+这时kernel.txt放在adb所在的目录下
+3. dmesg
+主动做anr: kill -3 pid
+
+bugreport里面包含了各种log信息,大部分log也可以通过直接运行相关的程序来直接获得:
+adb bugreport > bugreport.txt
+
+lenovo: ftp://suez:L9diK48wlsi3489ysdf873@192.168.0.101/log/S868t_S-1-01_3519.DVT1_20121202/¿?¿?.rar
+
+lc1810平台打reg的方法：
+即：cat /sys/bus/platform/devices/codec_voice_calibration/code_debug_register_set
+    dmesg
+cat /proc/driver/codec
+
+objdump
+
+我们可以通过命令启动android中的Activity，Service，BroadcastReceiver 等组件
+
+am start -n com.android.alarmclock/com.android.alarmclock.AlarmClock
+am start -n com.android.soundrecorder/com.android.soundrecorder.SoundRecorder
+
+1. 拨打一个电话：
+    am start -a android.intent.action.CALL -d tel:10086
+    这里-a表示动作，-d表述传入的数据，还有-t表示传入的类型。
+    am start -a android.intent.action.MEDIA_BUTTON -d keycode:126 -d action:0 -d count:0 -d downed:false -d btid=0
+
+am broadcast -a android.intent.action.ACTION_BATTERY_CHANGED -f 0x60000000 --ei level 1 --ei status 3 --ei health 0 --ei present 0 --ei scale 1 --ei voltage 3 --ei temprature 50 --ei plugged 1 --ei invalid_charger 0
+am broadcast -a android.intent.action.ACTION_POWER_CONNECTED -f 0x4000010
+
+2. 打开一个网页： 
+    am start -a android.intent.action.VIEW -d  http://www.baidu.com （这里-d表示传入的data）
+ 
+3. 打开音乐播放器：
+    am start -a android.intent.action.MUSIC_PLAYER 或者 包名和应用名可以在Androidmanifest.xml文件查看到
+    am start -n com.android.music/com.android.music.MusicBrowserActivity
+    // -S强制停止之前的，重新开始, -W 等待播放结束, am start可查看帮助
+    am start -n com.android.music/com.android.music.MediaPlaybackActivity -d /system/media/audio/bootaudio.mp3 -S -W
+    am start -n com.marvell.fmradio/com.marvell.fmradio.MainActivity --ez is_cit true
+    am force-stop com.marvell.fmradio
+
+4. 启动一个服务：
+    am startservice <服务名称>
+    例如：am startservice -n com.android.music/com.android.music.MediaPlaybackService (这里-n表示组件)
+    或者  am startservice -a com.smz.myservice (这里-a表示动作，就是你在Androidmanifest里定义的) 
+ 
+5. 发送一个广播：
+    am broadcast -a <广播动作>
+    例如： am broadcast -a com.smz.mybroadcast
+           am broadcast -a android.intent.action.BOOT_COMPLETED
+
+//列表显示所有的apk包
+pm list packages
+
+      pthread_attr_t attr;
+      if (pthread_attr_setschedpolicy(&attr, SCHED_RR) != 0) {
+        LOG(LS_ERROR) << "pthread_attr_setschedpolicy";
+      }
+      struct sched_param param;
+      if (pthread_attr_getschedparam(&attr, &param) != 0) {
+        LOG(LS_ERROR) << "pthread_attr_getschedparam";
+      } else {
+        // The numbers here are arbitrary.
+        if (priority_ == PRIORITY_HIGH) {
+          param.sched_priority = 6;           // 6 = HIGH
+        } else {
+          ASSERT(priority_ == PRIORITY_ABOVE_NORMAL);
+          param.sched_priority = 4;           // 4 = ABOVE_NORMAL
+        }
+        if (pthread_attr_setschedparam(&attr, &param) != 0) {
+          LOG(LS_ERROR) << "pthread_attr_setschedparam";
+        }
+      }
+
+
+        setpriority(PRIO_PROCESS, 0, prio);
+        pthread_once(&gDoSchedulingGroupOnce, checkDoSchedulingGroup);
+        if (gDoSchedulingGroup) {
+            if (prio >= ANDROID_PRIORITY_BACKGROUND) {
+                set_sched_policy(androidGetTid(), SP_BACKGROUND);
+            } else {
+                set_sched_policy(androidGetTid(), SP_FOREGROUND);
+            }
+        }
+
+
+pthread_create()中的attr参数是一个结构指针，结构中的元素分别对应着新线程的运行属性，主要包括以下几项：
+
+__detachstate，表示新线程是否与进程中其他线程脱离同步，如果置位则新线程不能用pthread_join()来同步，且在退出时自 行释放所占用的资源。缺省为PTHREAD_CREATE_JOINABLE状态。这个属性也可以在线程创建并运行以后用 pthread_detach()来设置，而一旦设置为PTHREAD_CREATE_DETACH状态（不论是创建时设置还是运行时设置）则不能再恢复 到 PTHREAD_CREATE_JOINABLE状态。
+
+__schedpolicy，表示新线程的调度策略，主要包括SCHED_OTHER（正常、非实时）、SCHED_RR（实时、轮转法）和 SCHED_FIFO（实时、先入先出）三种，缺省为SCHED_OTHER，后两种调度策略仅对超级用户有效。运行时可以用过 pthread_setschedparam()来改变。
+
+__schedparam，一个struct sched_param结构，目前仅有一个sched_priority整型变量表示线程的运行优先级。这个参数仅当调度策略为实时（即SCHED_RR 或SCHED_FIFO）时才有效，并可以在运行时通过pthread_setschedparam()函数来改变，缺省为0。
+
+__inheritsched，有两种值可供选择：PTHREAD_EXPLICIT_SCHED和PTHREAD_INHERIT_SCHED， 前者表示新线程使用显式指定调度策略和调度参数（即attr中的值），而后者表示继承调用者线程的值。缺省为 PTHREAD_EXPLICIT_SCHED。
+
+__scope，表示线程间竞争CPU的范围，也就是说线程优先级的有效范围。POSIX的标准中定义了两个值： PTHREAD_SCOPE_SYSTEM和PTHREAD_SCOPE_PROCESS，前者表示与系统中所有线程一起竞争CPU时间，后者表示仅与同 进程中的线程竞争CPU。目前LinuxThreads仅实现了PTHREAD_SCOPE_SYSTEM一值。
+
+
+
+
+pid_t tid  = gettid();
+set_sched_policy(tid, 1);
+setpriority(PRIO_PROCESS, tid, ANDROID_PRIORITY_URGENT_AUDIO);
+//androidSetThreadPriority(tid,ANDROID_PRIORITY_URGENT_AUDIO);	
+prctl(PR_SET_NAME, (unsigned long)"A2DP_write", 0, 0, 0);
+
+创建线程实例：
+int error = pthread_create((pthread_t*)&s_pCurOutput[4], NULL, incomeRingVolume, s_pCurOutput);
+if(error != 0)
+{
+    ALOGD("create thread error=%d", error);
+}
+else{
+    pthread_detach(s_pCurOutput[4]);
+}
+void *AudioMTKPolicyManager::incomeRingVolume(void *args){
+    pthread_exit((void *)NULL);
+    return NULL;
+}
+
+
+
+kernel加入本地时间的打印：
+
+#include <linux/types.h>
+#include <linux/time.h>
+
+#include <linux/timer.h>
+#include <linux/timex.h>
+#include <linux/rtc.h>
+
+        struct timex  txc;
+        struct rtc_time tm;
+        do_gettimeofday(&(txc.time));
+        rtc_time_to_tm(txc.time.tv_sec,&tm);
+        printk("UTC time :%d-%d-%d %d:%d:%d\n",tm.tm_year+1900,tm.tm_mon+1, tm.tm_mday,tm.tm_hour,tm.tm_min,tm.tm_sec);
+
+        //uint32_t nSecond = jiffies;
+        //unsigned long secs = get_seconds();
+        struct timeval tv;
+        struct tm res;
+        u32 offset = 0;//arch_gettimeoffset();
+        do_gettimeofday(&tv);
+        time_to_tm( tv.tv_sec, offset, &res);
+        printk("BeiJing time : %lu-%d-%d %d:%d:%d.%lu\n", 
+            res.tm_year + 1900, res.tm_mon + 1,res.tm_mday, res.tm_hour+8, res.tm_min, res.tm_sec, tv.tv_usec);
+
+
+lc181x写寄存器52的方法：
+adb shell "echo w 52 0x70 >/proc/driver/codec"
+cat /proc/driver/codec
+读寄存器52的方法：
+adb shell "echo r 52 0x70 >/proc/driver/codec"
+调整FM的音量为0：
+echo w 2 0 > /proc/driver/codec
+echo w 3 0 > /proc/driver/codec
+
+enable fm headset(reg90=0x42):
+echo w 90 0x7b > /proc/driver/codec
+disable fm headset:
+echo w 90 0x39 > /proc/driver/codec
+
+enable fm speaker(reg89=0x18):
+echo w 89 0xde > /proc/driver/codec
+disable fm speaker:
+echo w 89 0xc6 > /proc/driver/codec
+
+压缩：
+tar czvfp  vim_rc.tar.gz .vim/ .vimrc
+解压：
+tar xzvf vim.tar.gz
+递归解压当前目录所有tar.gz文件
+find . -iname "*.tar.gz" -execdir tar xzvf {} +
+find . -iname "*.gz" -execdir gzip -d {} +
+find . -iname "*.tar" -execdir tar -cvf {} +
+find . -iname "*.rar" -execdir rar x {} +
+当前目录不递归解压所有：
+for i in *.tar.gz; do tar xzvf $i;done
+for i in *.gz; do gzip -d $i;done
+for i in *.rar; do rar x $i;done
+
+find . -iname "*.zip" -execdir zip {} +
+find . -iname "*.tar.gz" -execdir tar xzvf {} + ; find . -iname "*.gz" -execdir gzip -d {} +
+
+android引起内存泄漏的情况有
+1.查询数据库的游标cursor的释放
+2.对象引用的传递
+3.构造Adapter时使用现有的view，不再新建view
+4.Bitmap对象不使用时要调用Bitmap.recycle()释放
+5.格外重视static对象
+6.线程传输
+
+
+ps -ef | grep firefox | grep -v grep | cut -c 9-15 | xargs kill -s 9
+说明：
+“grep firefox”的输出结果是，所有含有关键字“firefox”的进程。
+“grep -v grep”是在列出的进程中去除含有关键字“grep”的进程。
+“cut -c 9-15”是截取输入行的第9个字符到第15个字符，而这正好是进程号PID。
+“xargs kill -s 9”中的xargs命令是用来把前面命令的输出结果（PID）作为“kill -s 9”命令的参数，并执行该命令。“kill -s 9”会强行杀掉指定进程。
+pstree线程树
+
+
+tiger操作codec：
+adb shell tinymix
+adb shell tinymix 0
+adb shell tinymix 24 1
+adb shell tinymix 25 1
+adb shell tinymix 36 1
+
+列表全部信号错误：kill -l
+
+自测需要的软件：weixin,QQ2012,QQ2013,Skype,YY,Sipdroid,GTalk,TianTian
+
+
+g++ -g -rdynamic -o libA.so -shared A.cpp backtrace.cpp
+函数地址转化为行号：addr2line -C -f -e
+dump函数信息：objdump
+yang@Ubuntu$ src/prebuilt/linux-x86/toolchain/arm-eabi-4.2.1/bin/arm-eabi-addr2line -f -e src/out/target/product/pnx6715_refd/symbols/system/lib/libfmradio_jni.so 0000960c 000129ec 0000cdce 0000b2a4 00009496 00008258 000054f6
+
+
+android native线程锁：
+pthread_mutex_lock(&adev->lock);
+pthread_mutex_unlock(&adev->lock);
+
+自旋锁：
+static Mutex mmi_mLock;
+AutoMutex lock(mmi_mLock);
+
+手动设置锁：
+Mutex *mLock = new Mutex;
+mLock->lock();
+mLock->unlock();
+
+
+统计文件xml中的<list>和</list>次数：
+grep -rinP '<list>|</list>' device/sprd/common/libs/audio/vbc/apm/devicevolume.xml | wc -l
+
+kill -l列表所有的signal
+
+
+java打印调用堆栈：
+RuntimeException ee = new RuntimeException("call stack");
+ee.fillInStackTrace();
+Log.e(TAG, "new dump :",  ee);
+
+
+man的用法，查询某一个命令或者函数：
+进入查询：man top
+退出查询：q
+退出一般命令行的方法：-q
+
+
+Linux的man很强大，该手册分成很多section，使用man时可以指定不同的section来浏览，各个section意义如下： 
+1 - commands
+2 - system calls
+3 - library calls
+4 - special files
+5 - file formats and convertions
+6 - games for linux
+7 - macro packages and conventions
+8 - system management commands
+9 - 其他
+解释一下, 
+1是普通的命令
+2是系统调用,如open,write之类的(通过这个，至少可以很方便的查到调用这个函数，需要加什么头文件)
+3是库函数,如printf,fread
+4是特殊文件,也就是/dev下的各种设备文件
+5是指文件的格式,比如passwd, 就会说明这个文件中各个字段的含义
+6是给游戏留的,由各个游戏自己定义
+7是附件还有一些变量,比如向environ这种全局变量在这里就有说明
+8是系统管理用的命令,这些命令只能由root使用,如ifconfig
+例如：
+man 1 top
+man 2 open
+输入q即可直接退出
+
+安装help文件：
+sudo apt-get install manpages
+sudo apt-get install manpages-de
+sudo apt-get install manpages-de-dev
+sudo apt-get install manpages-dev
+sudo apt-get install manpages-posix-dev
+
+生成多级目录的方法：
+mkdir ./123/123/123/ -p
+
+把cpu占用率较高的前20个进程/线程信息（按照cpu排序），刷新10次，每次间隔0.5s，写到top_info.txt里面：
+system("top -d 0.5 -s cpu -t -m 20 -n 10 > /data/top_info.txt");
+//system("top -d 0.5 -s cpu -t -m 20 > /data/top_info.txt");
+//usleep(3000000);
+////杀死top进程的方法
+//system("ps | busybox grep top | busybox cut -c 9-15 | busybox xargs kill");
+//system("ps | busybox grep top | busybox awk '{print $2}' | busybox xargs kill");
+//system("busybox pgrep top | busybox xargs kill");
+//system("pkill top");
+//system("killall top");
+
+
+C语言中的代码中的打印，预编译输出：
+#define PTODO_LINENUMBER_TO_STRING(x) #x
+#define PTODO_LINENUMBER(x) PTODO_LINENUMBER_TO_STRING(x)
+#define INCLUDE_FILE_AND_LINE(string) __FILE__"(" PTODO_LINENUMBER(__LINE__) "): "string
+#pragma message( INCLUDE_FILE_AND_LINE("Last modified on ") __TIMESTAMP__ ) 
+
+make mk文件的打印，预编译输出：
+$(warning old_name is $(old_name))
+$(warning "line43")
+
+sh脚本的字符串输出：
+num=2
+echo “this is the ${num}"
+
+leadcore, audio :
+comip_1810_i2s.c
+comip_1810_dma.c
+comip_1810_soc.c
+comip_codes_1810.c
+comip_codes_interface.c
+
+iostat
+vmstat ： 显示总体内存状态
+busybox free   ： 显示总体内存状态
+dumpsys meminfo : 显示各应用内存使用情况
+adb shell procrank
+
+在 Framework  ProcessList.java 中有如下代码可用：
+ProcessList() {  
+    MemInfoReader minfo = new MemInfoReader();  
+    minfo.readMemInfo();  
+    mTotalMemMb = minfo.getTotalSize()/(1024*1024);  
+}        
+这个可以用于 app 层来适配不同内存配置的机型
+
+top：显示所有进程，比如mediaserver的pid为100
+lsof 100：pid为100的进程打开的文件
+mediaserv   100       root   44       ???                ???       ???        ??? /system/media/audio/ringtones/water1.ogg
+/proc/100/fd目录下找到文件句柄为44的文件，同时可以导出到pc端
+
+
+比较new和old目录生成补丁patch.diff:
+diff -Naurp new/  old/ > patch.diff
+
+把patch.diff补丁打到当前目录,并备份
+patch -p0 -b < patch.diff
+patch -p1 -b < patch.diff
+
+卸载当前目录的patch.diff补丁
+patch -p0 -R < patch.diff
+
+把前面的字符串作为的参数，替换到{}对应的位置
+| xargs -i cp {} ./patch_backup/
+
+重命名去除当前目录的文件的.bak后缀
+rename '/s/\.bak$//' *.bak
+
+把patch.diff打到当前目录的对应文件，并在patch_backup生成.orig后缀的备份，并去掉文件的.orig的后缀
+patch -p0 -b < patch.diff | find ./time0/ -name *.orig | xargs -i cp {} ./patch_backup/ | rename '/s/\.orig$//' *.orig
+
+
+侧音（Sidetone）：自己的声音从自己的手机终端的Mic进去，不经过传输网络，而是通过bb部分，机构震动，由自己手机的Rec出来。一般在PCBA定位稳固，机壳内部合理的情况下，通过修改软件来调节。注：侧音一般不能完全关掉，人在打电话的同时，听到自己的声音会比较舒服。CTA对Sidetone是有要求的，18+-5dB。
+
+回音（Echo）：自己的声音从自己手机的Mic输入==>自己手机BB+RF处理发射==>网络传输==>对方手机的RF+BB处理==>自己的声音从对方手机的rec出来进入对方手机的Mic，然后对方手机的BB+RF处理发射==>网络传输==>自己的手机rec在听到对方说话的同时，听到的自己的刚才已经说过的话，这就是回声。一般都是软件调节。CTA对Echo要求：<46dB。
+
+ASLA         - Advanced Sound Linux Architecture
+OSS          - 以前的Linux音频体系结构，被ASLA取代并兼容
+Codec        - Coder/Decoder
+I2S/PCM/AC97 - Codec与CPU间音频的通信协议/接口/总线
+DAI          - Digital Audio Interface 其实就是I2S/PCM/AC97
+DAC          - Digit to Analog Conversion
+ADC          - Analog to Digit Conversion
+DSP          - Digital Signal Processor
+Mixer        - 混音器，将来自不同通道的几种音频模拟信号混合成一种模拟信号
+Mute         - 消音，屏蔽信号通道
+PCM          - Pulse Code Modulation 一种从音频模拟信号转换成数字信号的技术，区别于PCM音频通信协议
+Sample Rate  - ADC的频率，每秒采样的次数，典型值如44.1KHZ
+Sample Length- 比如24bit，就是将音频模拟信号按照2的24次方进行等分
+SSI          - Serial Sound Interface
+DAPM         - Dynamic Audio Power Management
+AGC是自动增益补偿功能（Automatic Gain Control），AGC可以自动调麦克风的收音量，使与会者收到一定的音量水平，不会因发言者与麦克风的距离改变时，声音有忽大忽小声的缺点。
+ANS是背景噪音抑制功能（Automatic Noise Suppression），ANS可探测出背景固定频率的杂音并消除背景噪音，例如：风扇、空调声自动滤除。呈现出与会者清晰的声音。
+AEC是回声消除器（Acoustic Echo Chancellor）,AEC可以消除各种延迟的回声。
+CODEC和蓝牙之间用的PCM，CODEC和CPU间通过I2C通信
+蓝牙到cpu以及codec的音频接口都是用PCM接口
+4个device有：pcm，timer，jack，control
+
+声卡信息的节点：/proc/asound/
+/sys/class/sound
+/dev/snd/
+/sys/bus/platform/devices/*codec*|*sound*
+
+codec、pcm、i2s可以看做同层的，分别对于音频设备的control、dma、i2s接口；、pcm、i2s>会分别export相关结构体给层，层将音频设备三部分与CPU Spec联结起来，其probe顺序是.probe->.probe；另外、pcm、i2s>在各自的module_init中将自身注册到alsa-core中
+
+SND_DRV_DEV包含的device链表一般包含：SNDRV_DEV_CONTROL, SNDRV_DEV_PCM, SNDRV_DEV_JACK, SNDRV_DEV_TIMER, SNDRV_DEV_BUS, SNDRV_DEV_INFO, SNDRV_DEV_RAWMIDI,SNDRV_DEV_SEQUENCER, SNDRV_DEV_HWDEP
+设备包含创建build，注册registered和断开disconnected三个状态
+kerel/drivers/switch/switch_comip_lc1120.c是耳机插拔的控制
+codec跟硬件无关负责配置编码(回放/捕捉)，dai是具体的数字音频接口(ac97/pcm/i2s)，platform是跟芯片相关跟板无关的代码,机器(soc声卡设备)是platform和codec的桥梁, http://blog.csdn.net/orz415678659/article/details/8982771
+
+侧音（Sidetone）：自己的声音从自己的手机终端的Mic进去，不经过传输网络，而是通过bb部分，机构震动，由自己手机的Rec出来。一般在PCBA定位稳固，机壳内部合理的情况下，通过修改软件来调节。注：侧音一般不能完全关掉，人在打电话的同时，听到自己的声音会比较舒服。CTA对Sidetone是有要求的，18+-5dB。
+
+回音（Echo）：自己的声音从自己手机的Mic输入==>自己手机BB+RF处理发射==>网络传输==>对方手机的RF+BB处理==>自己的声音从对方手机的rec出来进入对方手机的Mic，然后对方手机的BB+RF处理发射==>网络传输==>自己的手机rec在听到对方说话的同时，听到的自己的刚才已经说过的话，这就是回声。一般都是软件调节。CTA对Echo要求：<46dB。
+
+
+设置Ccach：
+（Ccach可以加速重编译）
+gedit ~/.bashrc
+添加：
+# set android complition ccache
+export USE_CCACHE=1
+export CCACHE_DIR=<path-to-your-cache-directory>    （可选，默认位置为~/.ccach）
+source ~/.bashrc
+在android源码目录下执行：
+prebuilts/misc/linux-x86/ccache/ccache -M 50G    （这个我没设，不知道默认大小是多大）
+
+
+把当前手机的dump写到emmdusbdump.dump文件中
+/media/ssd/pxa1920_0905/out/host/linux-x86/bin$ ./fastboot dump emmdusbdump
+./crash vmlinux emmdusbdump --machdep phys_base=0x00100000
+
+C语言获取时间的code:
+struct timespec tm;
+clock_gettime(CLOCK_MONOTONIC, &tm);
+long long time_interval = tm.tv_sec * 1000L + (tm.tv_nsec / 1000000L);
+ 
+// ubuntu
+aplay -c 1 -r 44100 -f S16_LE ~/Music/5.wav
+play -c 1 -r 44100 -t wav ~/Music/5.wav
+aplay -c 2 -r 44100 -f S16_LE /media/ssd/pxa1920_0905/streamdump.ah_tx.pcm
+
+//Recording WAVE 'foobar.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
+arecord -d 10 -f cd -t wav foobar.wav
+arecord -c 1 -r 44100 -f S16_LE xxx.pcm
+//arecord -c 1 -r 44100 -f S16_LE | aplay -t raw -f S16_LE -c 2 -r 44100 /dev/stdin
+//arecord -t raw -f S16_LE -c 2 -r 44100 | aplay -Dplughw:0,0 -t raw -f S16_LE -c 2 -r 44100 /dev/stdin
+aplay -Dplughw:0,0 -c 2 -r 44100 -f S16_LE  -t raw /data/streamdump.ah_tx.pcm
+stop media
+aplay -D plughw:0,0 -t raw -c 2 -r 44100 -f S16_LE /mnt/sdcard/Music/play_out_dump.pcm
+
+//插入/system/bin/logwrapper把log输出到kernel的log中
+service marvelltel /system/bin/logwrapper /system/bin/tel_launch.sh
+    class main
+    oneshot
+    group system
+
+解决windows下的zip文件解压到linux乱码问题：
+unzip -O CP936 ×.zip
+
+grep -rinP 'died|fatal|exception' ./main
+grep -rinP 'died|fatal|exception|fail|error|write error|read error' ./main
+
+Invoke ". build/envsetup.sh" from your shell to add the following functions to your environment:
+- lunch:   lunch <product_name>-<build_variant>
+- tapas:   tapas [<App1> <App2> ...] [arm|x86|mips|armv5] [eng|userdebug|user]
+- croot:   Changes directory to the top of the tree.
+- m:       Makes from the top of the tree.
+- mm:      Builds all of the modules in the current directory, but not their dependencies.
+- mmm:     Builds all of the modules in the supplied directories, but not their dependencies.
+- mma:     Builds all of the modules in the current directory, and their dependencies.
+- mmma:    Builds all of the modules in the supplied directories, and their dependencies.
+- cgrep:   Greps on all local C/C++ files.
+- jgrep:   Greps on all local Java files.
+- resgrep: Greps on all local res/*.xml files.
+- godir:   Go to the directory containing a file.
+
+
+自定义ilog输出宏：
+#include <utils/Log.h> //all Android LOG macros are defined here.
+//just dummy defines since were not including syslog.h.
+#define LOG_EMERG   0
+#define LOG_ALERT   1
+#define LOG_CRIT    2
+#define LOG_ERR     3
+#define LOG_WARNING 4
+#define LOG_NOTICE  5
+#define LOG_INFO    6
+#define LOG_DEBUG   7
+#define syslog_level LOG_DEBUG
+#define LOGATCI(lvl,f,...) do{if(lvl<=syslog_level){\
+                                android_printLog(android_log_lvl_convert[lvl], LOG_TAG, \
+                                "%d:%s(): " f, __LINE__, __FUNCTION__, ##__VA_ARGS__);}\
+                            }while(0)
+
+
+pxa1920: 
+#define DEFAULT_EXT_SERIAL_DEVICE         "(null)" //"/dev/ttyS1"
+#device used for diag port
+diag_port=/dev/cmsockdev4
+#device used for diag uart tty
+diag_uart=/dev/ttyS1
+#device used for diag usb tty
+diag_usb=/dev/ttydiag0
+#device used for diag usb key
+diag_usb_key=diag
+./vendor/marvell/generic/lte-telephony/apps/modem/modem_al.c:29:#define MODEM_TTY_USB_DEVICE "/dev/ttymodem0"
+dump ssp的功能：soc_adaengine-pcm.c
+
+mt6852:  diag-uart:/dev/ttymodem0  diag-usb:/dev/ttyGS0 /dev/ttyGS1
+setprop persist.sys.usb.config mtp,adb,acm
+
+AUD+I2SPLY=1,1,1,8000,32
+AUD+I2SPLYSTP
+AUD+RECEIVER=1o
+
+// speaker
+AUD+MEDPLY=2,2,2
+AUD+MEDSTOP
+/sdcard/02/02/02.mp3
+
+AUD+RECEIVER=1
+AUD+RECEIVER=0
+
+MM+ERECORD=1,
+MM+ERECORD=0
+/sdcard/HDRecordTemp.wav
+
+AUD+I2SREC
+AUD+I2SREC=1,1,1,8000
+AUD+I2SRECSTP
+/sdcard/I2SRecord/
+
+// mic
+AUD+RDMIC=1,0,1,8000
+AUD+RDSTP
+/sdcard/Up_link_ADC/001.wav
+
+// loopback
+MM+SLBK=21,1
+MM+SLBK=21,3
+MM+SLBK=0
+
+MM+SLBK=21,2  Mic + Headset
+MM+SLBK=22,1  headset_Mic + receiver
+MM+SLBK=22,3  headset_Mic + speaker
+MM+SLBK=0
+
+init.rc中的service是可以用start和stop来启动和结束的，还可以:
+setprop ctl.stop audio-daemon ; setprop ctl.start audio-daemon ; setprop ctl.stop atcid-daemon ; setprop ctl.start atcid-daemon
+setprop persist.sys.usb.config mtp,adb,acm
+
+ubuntu编译windows上的adb和fastboot：
+sudo apt-get install mingw32
+. build/envsetup.sh
+choosecombo
+make USE_MINGW=y adb
+make USE_MINGW=y fastboot
+
+ftp://a788t:KmSe1u47OvBrZm8Fgw62G@192.168.0.97/rom/dvt1/LenovoA788t_S8355_140123/LenovoA788t_S8355_140123.zip
+
+linux 串口编程
+调节音频参数的功能
+sample rate conversions 
+audio mixer
+
+
+定时执行命令：
+查看当前命令列表：crontab -l
+打开写命令的文件：crontab -e
+在任意星期03月06日13点44分写一个字符串到指定文件：44 13 6 3 * echo "Have a break now." >> /media/ssd/test.txt
+SHELL=/bin/bash
+30 * * * * cd /home/barry/top800/top10/top10_fruits/ && bash ./top10_all.sh
+46 14 6 3 * cd /media/ssd/pxa1920_1113 && bash ./gvim_prepare.sh
+
+
+
+
+1.       Checked the log but didn’t find useful information to root cause the problem.
+Please re-test and capture a new log with the following changes:
+Please change in vendor/marvell/generic/libacm/acm/inc/acm_debug.h and define
+DEBUG_APH
+DEBUG_ACH
+DEBUG_ELBA
+DEBUG_USTICA
+You might need to touch the whole libacm folder and rebuild the image.
+
+ 2.       In adb shell, please run the following command:
+          setprop dev.streamdump.ah_rx 1
+           After setting the above property, please retest, there will be some files generated under /data/streamdump.XXXX.pcm. Check whether there is noise in the dumped file.
+           3.       Please apply the patch attached and follow the instructions in the comment part of the patch. Check whether there is noise in the dumped file.
+
+
+Color value must be #rgb, #argb, #rrggbb, or #aarrggbb
+
+国际通信标准制定人嗓音的发声频率范围300HZ-3400HZ
+人耳朵的听力频率范围20HZ-20000HZ
+
+dmesg仅输出缓存比cat /proc/kmsg更稳定，不易丢log
+读取event设备状态，并监控event消息的方法：getevent
+
+
+
+#define AT_CHENNEL_SELECT_TIMES 3
+#define AT_CHENNEL_SELECT_TIMEOUT 500000
+
+int checkATChannel_r(int fd) {
+    int cnt = 0;
+    fd_set fds;
+    int ret = 0;
+    struct timeval tv;
+
+    if(fd >= FD_SETSIZE){
+        LOGE("line%d, error, fd=%d > %d", __LINE__, fd, FD_SETSIZE);
+        return -1;
+    }
+
+    while (cnt < AT_CHENNEL_SELECT_TIMES) {
+        FD_ZERO(&fds);
+        FD_SET(fd, &fds);
+        //LOGW("FD_ISSET=%d", FD_ISSET(fd, &fds));
+        memset(&tv, 0x00, sizeof(tv));
+        tv.tv_sec = 0;
+        tv.tv_usec = AT_CHENNEL_SELECT_TIMEOUT;
+        ret = select(fd+1, &fds, NULL, NULL, &tv);
+        switch (ret) {
+            case -1:
+                cnt++;
+                break;
+            case 0:
+                LOGE("read AT Channel (%d) is timeout", fd);
+                cnt++;
+                break;
+            default:
+                if (FD_ISSET(fd, &fds)) {
+                    LOGI("read AT Channel is OK");
+                    return 0;
+                }
+        }
+        FD_CLR(fd, &fds);
+    }
+
+    LOGE("checkATChannel_r, channel is unreadable!!!");
+    return -1;
+}
+
+// select handle of fopen
+    FILE *fp = fopen(fileName, "r");
+    if (checkATChannel_r(fp->_file) < 0) {
+        LOGE("readable error ");
+    }
+
+
+shell@A788t:/ # cat /proc/version
+Linux version 3.4.39 (Android-bot@Android-server) (gcc version 4.7 (GCC) ) #2 SMP PREEMPT Fri Mar 14 10:27:40 CST 2014
+
+
+cd /sys/ontim_dev_debug/iic
+echo 1 > chip_num
+echo 0x39 > i2c_addr
+echo 0x80 32 > read
+cd /sys/ontim_dev_debug/als_prox
+
+cd /sys/ontim_dev_debug/iic
+echo 2 > chip_num
+echo 0x38 > i2c_addr
+echo 0x00 50 > read
+
+cat /sys/kernel/debug/pm800_reg
+cat /sys/kernel/debug/pm805_reg
+i2cdump -f 2 0x38
+cat /proc/interrupts
+
+adb shell
+su
+i2cset -f -y 2 0x38 0xa 0x2
+i2cget -f -y 2 0x38 0xa
+(读回来确认一下)
+
+ 
+
+framework 检测耳机插入的消息节点：/sys/class/switch/h2w/state
+                           AudioManager.java <-- AudioService.java <-- AudioSystem.java <-- AudioPolicyService.java
+                                   | 
+                                   v
+           SystemServer.java <--WiredAccessoryManager.java <--|
+                                                              |
+                                                              |-- UEventObserver.java <-- android_os_UEventObserver.cpp <-- uevent.c <-- socket.c <-- [socket] <-- [event] <-- jack.c <-- 88pm800.c
+                                                              |
+             UsbService.java <- UsbDeviceManager.java.java <--| 
+                                                              |
+                                                        ......|
+
+
+setprop dev.streamdump.ah_rx 1
+
+zygote
+setprop 
+adb shell recordertest 2147483652 1
+adb shell recordertest 2147483664 4
+setprop ontim.loopback.run 1
+echo 2147483652,1 >> /dev/pipe/audioloop.ctrl
+echo 2147483664,1 >> /dev/pipe/audioloop.ctrl
+
+open read write lseek
+
+logcat | busybox grep 'PVT:' | busybox awk '{print $12}' | busybox cut -c 7-14
+
+
+scue@Link:bootimg$ for n in $(adb shell busybox | sed -n "$[$(adb shell busybox | sed -n '/Currently\ defined\ functions/=')+1],$ p") ; do echo "symlink /sbin/busybox /sbin/$n" | awk -F',' '{print $1}'; done 
+symlink /sbin/busybox /sbin/[
+symlink /sbin/busybox /sbin/[[
+symlink /sbin/busybox /sbin/arp
+symlink /sbin/busybox /sbin/ash
+symlink /sbin/busybox /sbin/awk
+symlink /sbin/busybox /sbin/base64
+symlink /sbin/busybox /sbin/basename
+symlink /sbin/busybox /sbin/bbconfig
+symlink /sbin/busybox /sbin/blockdev
+symlink /sbin/busybox /sbin/brctl
+symlink /sbin/busybox /sbin/bunzip2
+symlink /sbin/busybox /sbin/bzcat
+symlink /sbin/busybox /sbin/bzip2
+symlink /sbin/busybox /sbin/cal
+symlink /sbin/busybox /sbin/cat
+
+ubuntu 12.04下访问windows共享文件夹   主文件夹下，按Ctrl+l,输入smb://192.168.0.80,按提示输入登陆账户
+
+测试共享服务器：\\192.168.0.223用户名：testshare 密码：H@ppy2013$
+smb://192.168.0.223
+
+df显示分区信息
+
+使用busybox前先运行ratc，这样运行busybox的UID将是0，也就是root。
+首先把system目录改成可读性的：busybox mount -o remount,rw /system，
+当然你还不能改下面的文件，因为system下文件的所有者都不是你。但你可以偷梁换柱把system下的目录给换掉。
+使用命令Busybox mount -t tmpfs none /system/xbin，呵呵这下xbin目录你随便写了。
+将su跟busybox弄过去cp /data/data/xxx/su /system/xbin。然后赋权限chmod 4755 /system/xbin/su。
+然后使目录生效busybox --install -s /system/xbin，别忘善后busybox mount -o remount,ro /system去掉system可写
+
+
+串号文件节点：/sys/class/android_usb/android0/iSerial
+usb连接节点：/sys/class/power_supply/usb/online
+
+读取event消息的命令：getevent
+sh中模拟发送event: sendevent /dev/input/event6 3 $((0x0035)) $((12345678))
+
+7731 pn PhaseCheckParse.java
+
+模拟震动200ms:
+echo 200 > /sys/class/timed_output/vibrator/enable
+
+od -t x1 a.txt 以十六进制输出a.txt
+
+cd /media/ssd/android-cts
+./cts-tradefed
+run cts -c android.app.cts.SystemFeaturesTest
+run cts -c android.media.cts.MediaRecorderTest -m testRecordingAudioInRawFormats
+
+连着前面就是ctr.start和ctr.stop系统属性：用来启动和停止服务的。例如：
+// start boot animation
+property_set("ctl.start", "bootanim");
+
+
+ps -ax 来查看进程与哪个控制终端相连
+
+sed -i "s/222/333/g" `grep 222 -rl .`
+搜索/etc/passwd,找到root对应的行，执行后面花括号中的一组命令，每个命令之间用分号分隔，这里把bash替换为blueshell，再输出这行
+nl /etc/passwd | sed -n '/root/{s/bash/blueshell/;p}'
+
+从inet addr:192.168.1.100 Bcast:192.168.1.255 Mask:255.255.255.0中把ip地址取出来:
+/sbin/ifconfig eth0 | grep 'inet addr' | sed 's/^.*addr://g' | sed 's/Bcast.*$//g'
+
+一条sed命令，删除/etc/passwd第三行到末尾的数据，并把bash替换为blueshell
+nl /etc/passwd | sed -e '3,$d' -e 's/bash/blueshell/'
+
+把test.txt中的[和]替换成空格 ,并使用空格为分隔符分割域并输出第五列
+sed -n 's/\[/ /g;s/\]/ /g;p' test.txt | awk '{print $5}'
+
+把123不带回车符覆盖到文件test.txt
+echo -n 123 > test.txt
+
+语音处理Speex 语音识别CMUSphinx
+
+grep -rinP WLAN packages/apps/Bluetooth/res/ | wc -l
+grep -c Wi-Fi 123.txt
+
+Y541:
+请按如下方式分别抓取声音小和声音正常的信息：
+声音小和声音正常分别执行如下命令：
+adb root
+adb shell
+cat /proc/asound/sprdphone/sprd-codec
+cat /proc/asound/sprdphone/vbc
+tinymix -D 0 或 1 或 2 或 3
+
+
+用户名：testshare
+密码：H@ppy2013$
+
+selinux:
+setsebool
+getsebool
+ps -Z
+id -Z
+chcon
+
+
+
